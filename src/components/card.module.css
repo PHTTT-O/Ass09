@@ -1,0 +1,27 @@
+.card{
+    width:300px;
+    margin:40px;
+    flex-wrap: wrap;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    background:white;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.cardBody{
+    padding:15px;
+    text-align:center;
+}
+
+.cardBody h2{
+    margin-bottom:10px;
+    color: #000; /* Ensure text color contrasts with background */
+    font-size: 1.5rem; /* Adjust size if needed */
+    display: block;
+}
