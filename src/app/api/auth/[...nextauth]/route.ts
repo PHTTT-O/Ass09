@@ -1,8 +1,8 @@
-import NextAuth from "next-auth";
+import authOptions from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import  userLogIn  from "@/libs/userLogIn";
 
-const handler = NextAuth({
+const handler = authOptions({
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -19,10 +19,10 @@ const handler = NextAuth({
           );
 
           return {
-            id: data.data._id,
-            name: data.data.name,
-            email: data.data.email,
-            role: data.data.role,
+            id: data._id,
+            name: data.name,
+            email: data.email,
+            role: data.role,
             token: data.token,
           };
         } catch {
